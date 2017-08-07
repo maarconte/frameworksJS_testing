@@ -1,0 +1,34 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    background-color: #eee;
+    padding: 30px;
+}
+
+.example-card {
+    width: 500px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.mat-button{
+    background: #ffdf0f;
+    margin-left: 15px;
+}
+
+.mat-button-toggle {
+        margin-bottom: 20px;
+        opacity: .4;
+}
+
+ .example-section {
+  align-content: center;
+  align-items: center;
+  height: 60px;
+} 
