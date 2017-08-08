@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { Ng2FilterPipeModule } from 'ng2-filter-pipe';
 
 import 'hammerjs';
 
@@ -30,7 +31,8 @@ import { AppComponent } from './app.component';
     BrowserModule,
    MaterialModule,
     BrowserAnimationsModule,
-    FormsModule
+    FormsModule,
+    Ng2FilterPipeModule
   ],
   // Main Component
   bootstrap: [ AppComponent ]

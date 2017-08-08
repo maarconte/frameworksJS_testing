@@ -1,36 +1,40 @@
-import { Component } from '@angular/core';
-import {Todo} from './todo';
-import {TodoDataService} from './todo-data.service';
+import { Component, Pipe, PipeTransform } from '@angular/core';
 
+interface Todo {  
+  completed: boolean;
+  title: string;
+}
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [TodoDataService]
+  // encapsulation: ViewEncapsulation.Emulated
 })
 export class AppComponent {
   title = 'app';
-  newTodo: Todo = new Todo();
+  todos: Todo[] = [{
+    completed: false,
+    title: 'Atlas Genius'
+  },{
+    completed:false,
+    title: 'Coldplay'
+  }];
 
-  constructor(private todoDataService: TodoDataService) {
+  filter = {
+  completed: false
+  };
+
+  addTodo(title){
+    this.todos.push({title, completed : false})
   }
 
-  addTodo() {
-    this.todoDataService.addTodo(this.newTodo);
-    this.newTodo = new Todo();
+  removeTodo(id) {
+    this.todos.splice(id, 1);
   }
 
-  toggleTodoComplete(todo) {
-    this.todoDataService.toggleTodoComplete(todo);
+ toggleTodo(todo:Todo){
+    todo.completed = !todo.completed;
   }
-
-  removeTodo(todo) {
-    this.todoDataService.deleteTodoById(todo.id);
-  }
-
-  get todos() {
-    return this.todoDataService.getAllTodos();
-  }
-
+  
 }
