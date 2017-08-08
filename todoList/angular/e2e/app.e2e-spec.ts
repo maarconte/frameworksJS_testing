@@ -1,10 +1,10 @@
-import { ProjectPage } from './app.po';
+import { AngularPage } from './app.po';
 
-describe('project App', () => {
-  let page: ProjectPage;
+describe('angular App', () => {
+  let page: AngularPage;
 
   beforeEach(() => {
-    page = new ProjectPage();
+    page = new AngularPage();
   });
 
   it('should display welcome message', () => {
