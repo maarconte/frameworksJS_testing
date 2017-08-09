@@ -9,6 +9,9 @@
 html {
     background-color: #eee;
     padding: 30px;
+    background-image: url('assets/concert.png');
+    background-size: cover cover;
+    background-repeat: no-repeat;
 }
 
 .example-card {
@@ -26,9 +29,27 @@ html {
         margin-bottom: 20px;
         opacity: .4;
 }
+.mat-list-item-content {
+    display: flex;
+}
+.mat-checkbox {
+    flex-grow: 2;
+}
+.mat-checkbox label {
+    float: left;
+}
 
  .example-section {
   align-content: center;
   align-items: center;
   height: 60px;
 } 
+
+.destroy {
+    color: #ccc;
+}
+
+.destroy:hover{
+    color: #999;
+    cursor: pointer;
+}

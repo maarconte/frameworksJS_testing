@@ -16,7 +16,7 @@
 <md-list class="todo-list">
   <md-list-item *ngFor="let todo of todos | filterBy: filter">
     <md-checkbox [class.completed]="todo.completed" [checked]="todo.completed" (change)="toggleTodo(todo)">{{todo.title}}</md-checkbox>
-    <button class="destroy" (click)="removeTodo(todo)">X</button> 
+   <md-icon  class="destroy" (click)="removeTodo(todo)">delete</md-icon>
   </md-list-item> 
 
 </md-list>
