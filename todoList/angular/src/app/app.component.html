@@ -1,11 +1,11 @@
 <!--The content below is only a placeholder and can be replaced.-->
   <md-card class="example-card">
   <md-card-content>
-  <h1>To-do list Angular</h1>
-  <md-button-toggle>Show all</md-button-toggle>
+  <h1>{{title}}</h1>
+  <md-button-toggle #toggle (change)="toggleFilter()">Artists viewed</md-button-toggle>
   <section class="example-section">
 <md-input-container>
-  <input mdInput #newtodo type="text" class="new-todo" placeholder="Wich artist is on your buckelist ?" autofocus="" (keyup.enter)="addTodo(newtodo.value); newtodo.value = ''">
+  <input mdInput #newtodo type="text" class="new-todo" placeholder="Who do you want to see ?" autofocus="" (keyup.enter)="addTodo(newtodo.value); newtodo.value = ''">
 </md-input-container>
 </section>
   </md-card-content>
@@ -20,8 +20,9 @@
   </md-list-item> 
 
 </md-list>
-  <footer class="footer" *ngIf="todos.length > 0 ">
-    <span class="todo-count"><strong>{{todos.length}}</strong> {{todos.length == 1 ? 'item' : 'items'}} left</span>
+  <footer class="footer" *ngIf="remaining() > 0 ">
+    <span class="todo-count"><strong>{{remaining()}}</strong> remaining of {{todos.length}} {{todos.length == 1 ? 'artist' : 'artists'}}</span>
   </footer>
   </md-card-content>
-</md-card>
+</md-card> 
+

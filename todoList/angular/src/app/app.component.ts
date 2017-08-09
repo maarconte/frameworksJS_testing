@@ -12,15 +12,22 @@ interface Todo {
   // encapsulation: ViewEncapsulation.Emulated
 })
 export class AppComponent {
-  title = 'app';
+  title = 'The concert bucketlist';
   todos: Todo[] = [{
     completed: false,
     title: 'Atlas Genius'
   },{
     completed:false,
-    title: 'Coldplay'
-  }];
-
+    title: 'Adele'
+  },{
+    completed:false,
+    title: 'Jamiroquai'
+  },{
+    completed:true,
+    title: 'Foals'
+  }
+];
+  
   filter = {
   completed: false
   };
@@ -36,5 +43,16 @@ export class AppComponent {
  toggleTodo(todo:Todo){
     todo.completed = !todo.completed;
   }
-  
+ toggleFilter(){
+
+    this.filter.completed = !this.filter.completed;
+  }
+
+  remaining = function() {
+    var count = 0;
+    this.todos.forEach(todo => {
+      count += todo.completed ? 0 : 1;
+    });
+    return count;
+  }
 }
