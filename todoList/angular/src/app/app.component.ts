@@ -1,4 +1,4 @@
-import { Component, Pipe, PipeTransform } from '@angular/core';
+import { Component} from '@angular/core';
 
 interface Todo {  
   completed: boolean;
@@ -41,10 +41,9 @@ export class AppComponent {
   }
 
  toggleTodo(todo:Todo){
-    todo.completed = !todo.completed;
+    setTimeout(() => todo.completed = !todo.completed, 400)
   }
  toggleFilter(){
-
     this.filter.completed = !this.filter.completed;
   }
 

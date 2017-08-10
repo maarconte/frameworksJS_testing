@@ -1,6 +1,6 @@
 // Angular Core
 import { RouterModule, Routes } from '@angular/router';
-import { NgModule } from '@angular/core';
+import { NgModule} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
@@ -17,7 +17,7 @@ import { AppComponent } from './app.component';
 @NgModule({
   // Components, Pipes, Directive
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   // Entry Components
   entryComponents: [
@@ -32,7 +32,8 @@ import { AppComponent } from './app.component';
    MaterialModule,
     BrowserAnimationsModule,
     FormsModule,
-    Ng2FilterPipeModule
+    Ng2FilterPipeModule,
+    
   ],
   // Main Component
   bootstrap: [ AppComponent ]
