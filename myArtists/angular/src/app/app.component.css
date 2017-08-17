@@ -1,0 +1,21 @@
+.container {
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 30px 50px;
+    width: 100%;
+}
+
+#main {
+    margin-left: 30px;
+    flex-grow: 3;
+}
+
+.mat-card-avatar {
+    margin-right: 15px;
+}
+
+.selected {
+    background-color: #CFD8DC;
+    color: white;
+  }

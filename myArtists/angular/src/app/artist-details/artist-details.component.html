@@ -1,0 +1,12 @@
+    <md-card id="details" *ngIf="artist">
+        <md-card-header>
+            <md-card-title>{{artist.name}}</md-card-title>
+        </md-card-header>
+        <img md-card-image src="{{artist.avatar}}" alt="{{artist.name}}">
+        <md-card-content>
+            <md-input-container>
+                <input mdInput [(ngModel)]="artist.name" placeholder="name"/>
+              </md-input-container>
+            <p>{{artist.desc}}</p>
+        </md-card-content>
+    </md-card>
