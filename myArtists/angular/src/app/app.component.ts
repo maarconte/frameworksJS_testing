@@ -1,30 +1,15 @@
-import { Component, OnInit} from '@angular/core';
-
-import { Artist } from './artist-details/artist';
-import { ArtistService } from './artist.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
-  providers: [ArtistService]  
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'Liveloop';
-  artists: Artist[];
-  selectedArtist: Artist;
+export class AppComponent implements OnInit {
 
-  constructor(public artistService: ArtistService) {}
+  constructor() { }
 
-  getArtists(): void {
-    this.artistService.getArtists().then(artists => this.artists = artists);
+  ngOnInit() {
   }
 
-  ngOnInit(): void {
-    this.getArtists();
-  }
- 
-  onSelect(artist: Artist): void {
-    this.selectedArtist = artist;
-  }
 }

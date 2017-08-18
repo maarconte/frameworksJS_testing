@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
-import { Artist } from './artist-details/artist';
-import { ARTISTS } from './mock.artists';
+import { Artist } from '../artist-details/artist';
+import { ARTISTS } from '../mock.artists';
 
 @Injectable()
 export class ArtistService {

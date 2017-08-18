@@ -1,0 +1,18 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+  <!-- <app-sidebar ></app-sidebar> -->
+
+  <md-card id="sidebar" class="myArtists">
+      <h2>My artists</h2>
+      <md-list>
+        <md-list-item *ngFor="let artist of artists" [class.selected]="artist === selectedArtist" (click)="onSelect(artist)">
+            <img md-card-avatar src="{{artist.avatar}}" alt="{{artist.name}}">
+          {{artist.name}}
+        </md-list-item>
+      </md-list>
+    </md-card> 
+    <div id="main">
+      <h1>{{title}}</h1>
+      <artist-details [artist]="selectedArtist" class="artist-details"></artist-details>
+    </div>
+</div>

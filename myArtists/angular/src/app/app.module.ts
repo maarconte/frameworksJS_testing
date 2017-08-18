@@ -8,12 +8,15 @@ import 'hammerjs';
 
 import { AppComponent } from './app.component';
 import { ArtistDetailsComponent } from './artist-details/artist-details.component';
+import { ArtistsComponent }     from './artists/artists.component';
+import { ArtistService }         from './service/artist.service';
 import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ArtistDetailsComponent,
+    ArtistsComponent,
     SidebarComponent
   ],
   imports: [
@@ -21,7 +24,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     MaterialModule,
     FormsModule // <-- import the FormsModule before binding with [(ngModel)]
   ],
-  providers: [],
+  providers: [ArtistService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
