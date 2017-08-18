@@ -1,23 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 
 import { Artist } from './artist-details/artist';
 import { ArtistService } from './artist.service';
- 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [ArtistService]
+  providers: [ArtistService]  
 })
-export class AppComponent implements OnInit{
+export class AppComponent {
   title = 'Liveloop';
   artists: Artist[];
   selectedArtist: Artist;
 
-  constructor(private artistService: ArtistService) { }
+  constructor(public artistService: ArtistService) {}
 
   getArtists(): void {
-    this.artistService.getArtistsSlowly().then(artists => this.artists = artists);
+    this.artistService.getArtists().then(artists => this.artists = artists);
   }
 
   ngOnInit(): void {
@@ -27,5 +27,4 @@ export class AppComponent implements OnInit{
   onSelect(artist: Artist): void {
     this.selectedArtist = artist;
   }
-
 }

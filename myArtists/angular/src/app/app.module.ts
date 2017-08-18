@@ -8,11 +8,13 @@ import 'hammerjs';
 
 import { AppComponent } from './app.component';
 import { ArtistDetailsComponent } from './artist-details/artist-details.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ArtistDetailsComponent
+    ArtistDetailsComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,

@@ -10,12 +10,3 @@
     margin-left: 30px;
     flex-grow: 3;
 }
-
-.mat-card-avatar {
-    margin-right: 15px;
-}
-
-.selected {
-    background-color: #CFD8DC;
-    color: white;
-  }
