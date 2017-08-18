@@ -1,0 +1,5 @@
+<h3>Top Artists</h3>
+
+<md-grid-list cols="2" rowHeight="1:1">
+   <md-grid-tile *ngFor="let artist of artists" [routerLink]="['/detail', artist.id]"><img src="{{artist.avatar}}" alt="{{artist.name}}"></md-grid-tile>
+</md-grid-list>

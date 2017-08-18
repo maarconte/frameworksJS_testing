@@ -1,7 +1,7 @@
 import { Component, OnInit, Output } from '@angular/core';
 
 import { Artist } from '../artist-details/artist';
-import { ArtistService } from '../artist.service';
+import { ArtistService } from '../service/artist.service';
 
 @Component({
   selector: 'app-sidebar',

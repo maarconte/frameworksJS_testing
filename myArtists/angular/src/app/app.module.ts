@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MaterialModule} from '@angular/material'; // <-- Material Angular
 import { FormsModule }  from '@angular/forms'; // <-- NgModel lives here
+import { RouterModule }   from '@angular/router';
 
 import 'hammerjs';
 
@@ -11,18 +12,23 @@ import { ArtistDetailsComponent } from './artist-details/artist-details.componen
 import { ArtistsComponent }     from './artists/artists.component';
 import { ArtistService }         from './service/artist.service';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+
+import { AppRoutingModule }     from './app-routing/app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
+    DashboardComponent,    
     ArtistDetailsComponent,
     ArtistsComponent,
-    SidebarComponent
+    SidebarComponent,
   ],
   imports: [
     BrowserModule,
     MaterialModule,
-    FormsModule // <-- import the FormsModule before binding with [(ngModel)]
+    FormsModule, // <-- import the FormsModule before binding with [(ngModel)]
+    AppRoutingModule
   ],
   providers: [ArtistService],
   bootstrap: [AppComponent]
